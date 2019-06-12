@@ -3,49 +3,61 @@
 exports[`rewritePaths 1`] = `
 Array [
   Object {
-    "end": 20,
-    "start": 17,
-    "text": "foo",
+    "end": 22,
+    "id": "foo",
+    "start": 19,
   },
   Object {
-    "end": 57,
-    "start": 43,
-    "text": "foo/lib/bar.js",
+    "end": 63,
+    "id": "foo/lib/bar.js",
+    "start": 49,
   },
   Object {
-    "end": 84,
-    "start": 81,
-    "text": "foo",
+    "end": 92,
+    "id": "foo",
+    "start": 89,
   },
   Object {
-    "end": 124,
-    "start": 116,
-    "text": "@foo/bar",
+    "end": 134,
+    "id": "@foo/bar",
+    "start": 126,
   },
   Object {
-    "end": 151,
-    "start": 148,
-    "text": "foo",
+    "end": 161,
+    "id": "foo",
+    "start": 158,
   },
   Object {
-    "end": 173,
-    "start": 170,
-    "text": "foo",
+    "end": 183,
+    "id": "foo",
+    "start": 180,
   },
   Object {
-    "end": 202,
-    "start": 199,
-    "text": "foo",
+    "end": 215,
+    "id": "foo",
+    "start": 212,
+  },
+  Object {
+    "end": 235,
+    "id": "foo",
+    "start": 232,
+  },
+  Object {
+    "end": 265,
+    "id": "foo",
+    "start": 262,
   },
 ]
 `;
 
 exports[`rewritePaths 2`] = `
-"import {a} from '@scope/foo'
-import {a,b,c} from 'foo/lib/bar.mjs'
-import {a as b} from '@scope/foo'
-import {a as b, c as d} from '@foo/bar'
+"import { a } from '@scope/foo'
+import { a, b, c } from 'foo/lib/bar.mjs'
+import { a as b } from '@scope/foo'
+import { a as b, c as d } from '@foo/bar'
 import * as foo from '@scope/foo'
 import foo from '@scope/foo'
-import foo, {a,b} from '@scope/foo'"
+import foo, { a, b } from '@scope/foo'
+export * from '@scope/foo'
+export { a, b, c } from '@scope/foo'"
 `;
