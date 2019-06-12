@@ -1,6 +1,6 @@
 {
   "name": "typescript-rewrite-paths",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Rewrite import paths in TypeScript code",
   "main": "lib/index.js",
   "files": [
