@@ -19,14 +19,17 @@
   "author": "Alec Larson",
   "license": "MIT",
   "dependencies": {
-    "magic-string": "^0.25.2",
-    "typescript": "^3.5.1"
+    "magic-string": "^0.25.2"
+  },
+  "peerDependencies": {
+    "typescript": ">=3"
   },
   "devDependencies": {
     "@sucrase/jest-plugin": "^2.0.0",
     "@types/jest": "^24.0.13",
     "dedent": "^0.7.0",
     "jest": "^24.8.0",
-    "prettier": "^1.18.2"
+    "prettier": "^1.18.2",
+    "typescript": "^3.5.1"
   }
 }

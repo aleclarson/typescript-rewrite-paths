@@ -1,12 +1,12 @@
 dependencies:
   magic-string: 0.25.2
-  typescript: 3.5.1
 devDependencies:
   '@sucrase/jest-plugin': 2.0.0
   '@types/jest': 24.0.13
   dedent: 0.7.0
   jest: 24.8.0
   prettier: 1.18.2
+  typescript: 3.5.1
 lockfileVersion: 5
 packages:
   /@babel/code-frame/7.0.0:
@@ -3363,7 +3363,7 @@ packages:
     resolution:
       integrity: sha1-WITKtRLPHTVeP7eE8wgEsrUg23I=
   /typescript/3.5.1:
-    dev: false
+    dev: true
     engines:
       node: '>=4.2.0'
     hasBin: true
