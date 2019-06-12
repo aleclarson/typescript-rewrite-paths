@@ -1,0 +1,51 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`rewritePaths 1`] = `
+Array [
+  Object {
+    "end": 20,
+    "start": 17,
+    "text": "foo",
+  },
+  Object {
+    "end": 57,
+    "start": 43,
+    "text": "foo/lib/bar.js",
+  },
+  Object {
+    "end": 84,
+    "start": 81,
+    "text": "foo",
+  },
+  Object {
+    "end": 124,
+    "start": 116,
+    "text": "@foo/bar",
+  },
+  Object {
+    "end": 151,
+    "start": 148,
+    "text": "foo",
+  },
+  Object {
+    "end": 173,
+    "start": 170,
+    "text": "foo",
+  },
+  Object {
+    "end": 202,
+    "start": 199,
+    "text": "foo",
+  },
+]
+`;
+
+exports[`rewritePaths 2`] = `
+"import {a} from '@scope/foo'
+import {a,b,c} from 'foo/lib/bar.mjs'
+import {a as b} from '@scope/foo'
+import {a as b, c as d} from '@foo/bar'
+import * as foo from '@scope/foo'
+import foo from '@scope/foo'
+import foo, {a,b} from '@scope/foo'"
+`;

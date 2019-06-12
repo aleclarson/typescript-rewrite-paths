@@ -1,0 +1,32 @@
+{
+  "name": "typescript-rewrite-paths",
+  "version": "1.0.0",
+  "description": "Rewrite import paths in TypeScript code",
+  "main": "lib/index.js",
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "build": "tsc -p .",
+    "test": "jest"
+  },
+  "keywords": [
+    "typescript",
+    "rewrite",
+    "import",
+    "paths"
+  ],
+  "author": "Alec Larson",
+  "license": "MIT",
+  "dependencies": {
+    "magic-string": "^0.25.2",
+    "typescript": "^3.5.1"
+  },
+  "devDependencies": {
+    "@sucrase/jest-plugin": "^2.0.0",
+    "@types/jest": "^24.0.13",
+    "dedent": "^0.7.0",
+    "jest": "^24.8.0",
+    "prettier": "^1.18.2"
+  }
+}
