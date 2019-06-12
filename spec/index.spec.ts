@@ -3,13 +3,15 @@ import dedent = require('dedent')
 
 test('rewritePaths', () => {
   const code = dedent`
-    import {a} from 'foo'
-    import {a,b,c} from 'foo/lib/bar.js'
-    import {a as b} from 'foo'
-    import {a as b, c as d} from '@foo/bar'
+    import { a } from 'foo'
+    import { a, b, c } from 'foo/lib/bar.js'
+    import { a as b } from 'foo'
+    import { a as b, c as d } from '@foo/bar'
     import * as foo from 'foo'
     import foo from 'foo'
-    import foo, {a,b} from 'foo'
+    import foo, { a, b } from 'foo'
+    export * from 'foo'
+    export { a, b, c } from 'foo'
   `
 
   expect(extractPaths(code)).toMatchSnapshot()
