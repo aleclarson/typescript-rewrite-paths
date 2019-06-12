@@ -5,7 +5,7 @@ export function rewritePaths(input: string, rewrite: (path: string) => string) {
   const output = new MagicString(input)
   extractPaths(input).forEach(i => {
     const text = rewrite(i.text)
-    if (text !== i.text) {
+    if (text !== i.text && typeof text == 'string') {
       output.overwrite(i.start, i.end, text)
     }
   })
