@@ -2,6 +2,7 @@
   "name": "typescript-rewrite-paths",
   "version": "1.2.0",
   "description": "Rewrite import paths in TypeScript code",
+  "repository": "aleclarson/typescript-rewrite-paths",
   "main": "lib/index.js",
   "files": [
     "lib"
