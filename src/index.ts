@@ -37,14 +37,16 @@ export function extractPaths(input: string) {
     } else if (ts.isExportDeclaration(node)) {
       const origin = node.moduleSpecifier
       if (origin) addPath(origin)
-    } else if (ts.isVariableDeclaration(node)) {
-      const init = node.initializer
-      if (init && ts.isCallExpression(init)) {
-        const callee = init.expression
-        if (ts.isIdentifier(callee) && callee.text == 'require') {
-          const origin = init.arguments[0]
-          if (origin && ts.isStringLiteral(origin)) {
-            addPath(origin)
+    } else if (ts.isVariableStatement(node)) {
+      for (const decl of node.declarationList.declarations) {
+        const init = decl.initializer
+        if (init && ts.isCallExpression(init)) {
+          const callee = init.expression
+          if (ts.isIdentifier(callee) && callee.text == 'require') {
+            const origin = init.arguments[0]
+            if (origin && ts.isStringLiteral(origin)) {
+              addPath(origin)
+            }
           }
         }
       }
