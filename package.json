@@ -9,6 +9,7 @@
   ],
   "scripts": {
     "build": "tsc -p .",
+    "prepare": "yarn build",
     "test": "jest"
   },
   "keywords": [
